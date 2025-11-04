@@ -1,0 +1,66 @@
+name: "Frontend bug"
+description: "Визуальные/клиентские баги на сайте (UI/TS)."
+title: "[Frontend] {{short_description}}"
+labels: ["frontend","bug"]
+assignees: []
+body:
+  - type: input
+    id: short_description
+    attributes:
+      label: Краткое описание
+      placeholder: "Например: Кнопка 'Создать' не отображается на мобильном"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Подробное описание проблемы
+      description: Что происходит и в каких условиях.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги для воспроизведения
+      placeholder: "1. Зайти на https://sphrix.cc\n2. Нажать ..."
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Браузер
+      options:
+        - Chrome (версия)
+        - Firefox
+        - Safari
+        - Edge
+        - Другой
+
+  - type: input
+    id: os
+    attributes:
+      label: ОС / устройство
+      placeholder: "Windows 11 / Android 14 / iPhone 13"
+
+  - type: textarea
+    id: console_errors
+    attributes:
+      label: Ошибки в консоли браузера (console.log / stacktrace)
+      placeholder: "TypeError: ..."
+
+  - type: textarea
+    id: network
+    attributes:
+      label: Проблемные сетевые запросы (ответы / статус)
+      placeholder: "GET /api/... — 500\nОтвет: {...}"
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Скриншоты / GIF / Видео
+      placeholder: "Ссылка на изображение"
+
+  - type: markdown
+    attributes:
+      value: "### Чеклист перед отправкой\n- [ ] Указал шаги для воспроизведения\n - [ ] Указал браузер\n- [ ] Приложил логи консоли браузера/сетевые ошибки\n- [ ] Приложил скриншоты/видео"

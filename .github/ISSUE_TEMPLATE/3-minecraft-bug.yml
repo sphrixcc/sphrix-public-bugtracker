@@ -1,0 +1,39 @@
+name: "Minecraft bug"
+description: "Баг, связанный с работой Minecraft сервера или плагинов."
+title: "[Minecraft] {{short_description}}"
+labels: ["minecraft","bug"]
+assignees: []
+body:
+  - type: input
+    id: short_description
+    attributes:
+      label: Краткое описание (заголовок)
+      placeholder: "Например: Пропадают надписи на табличках после рестарта"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Подробное описание проблемы
+      description: Опиши что происходит и почему считаешь это багом.
+      placeholder: "Полное описание..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги для воспроизведения (шаг за шагом)
+      description: Перечисли конкретные действия, чтобы воспроизвести баг.
+      placeholder: "1. Зайти на сервер\n2. Открыть сундук\n3. ..."
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Скриншоты / видео (вставь ссылки, залить можно на imgur)
+      placeholder: "URL к изображению/видео (или опиши визуально)"
+
+  - type: markdown
+    attributes:
+      value: "### Чеклист перед отправкой\n- [ ] Указал шаги для воспроизведения"

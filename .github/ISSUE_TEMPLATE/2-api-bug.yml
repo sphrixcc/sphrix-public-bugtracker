@@ -1,0 +1,27 @@
+name: "API bug"
+description: "Проблемы с backend/API — ошибки, некорректные ответы, падения."
+title: "[API] {{endpoint}} — {{short_description}}"
+labels: ["api","backend","bug"]
+assignees: []
+body:
+  - type: input
+    id: short_description
+    attributes:
+      label: Краткое описание
+      placeholder: "Например: При смене пароля возвращается 500"
+    validations:
+      required: true
+
+  - type: input
+    id: endpoint
+    attributes:
+      label: Endpoint
+      placeholder: "/api/v1/users/change-password"
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи консоли браузера/сетевые ошибки
+      description: Вставь релевантные строчки из консоли.
+    validations:
+      required: true

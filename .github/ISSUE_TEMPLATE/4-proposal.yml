@@ -1,0 +1,31 @@
+name: "Предложение по серверу"
+description: "Идеи и предложения по улучшению сервера/функционала."
+title: "[Proposal] {{short_description}}"
+labels: ["proposal","enhancement"]
+assignees: []
+body:
+  - type: input
+    id: short_description
+    attributes:
+      label: Краткое название предложения
+      placeholder: "Например: Добавить систему ежедневных квестов"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Область влияния
+      options:
+        - label: "Игровая механика"
+        - label: "Производительность"
+        - label: "UI/UX"
+        - label: "Другое"
+    validations:
+      required: true
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Скриншоты / макеты / ссылки
+      placeholder: "Ссылка на Figma или изображение"
